@@ -33,7 +33,7 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET"); // request as GET, not POST
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // do not echo results
 $result = curl_exec($ch);
 
-$file = "./$Y-$m-$d:$h.txt";  // update this to be a name format that meets your needs
+$file = "./abandoned_cart_$Y-$m-$d:$h.txt";  // update this to be a name format that meets your needs
 $handle = fopen($file, 'wx'); // open for writing 
 $data = $result;
 fwrite($handle, $data);  
